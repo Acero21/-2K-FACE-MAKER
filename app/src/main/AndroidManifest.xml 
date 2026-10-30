@@ -4,4 +4,4 @@
         android:label="2K FACE MAKER"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
     </application>
-</manifest> 
+</manifest>
