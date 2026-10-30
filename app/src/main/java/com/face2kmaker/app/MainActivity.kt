@@ -128,7 +128,7 @@ class MainActivity : Activity() {
                     var nx = -dx * 5f; var ny = -dy * 5f; var nz = 1f
                     val len = sqrt(nx * nx + ny * ny + nz * nz); nx /= len; ny /= len; nz /= len
                     normalPx[i] = Color.rgb(((nx * .5f + .5f) * 255).toInt(), ((ny * .5f + .5f) * 255).toInt(), ((nz * .5f + .5f) * 255).toInt())
-                    val edge = min(255, (abs(dx) + abs(dy)) * 900).toInt()
+                    val edge = ((abs(dx) + abs(dy)) * 900f).toInt().coerceIn(0, 255)
                     val l = lum[i]
                     val heightValue = (l * 255f).toInt().coerceIn(0, 255)
                     heightPx[i] = Color.rgb(heightValue, heightValue, heightValue)
